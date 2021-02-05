@@ -18,7 +18,13 @@ public class InformacoesUsuarioPageObjectsTest {
     public void testAdicionarUmaInformacaoAdicionalDoUsuario(){
         new LoginPage(navegador)
                 .clickSignIn()
-                .typeLogin("julio0001");
+                .fazerLogin("julio0001", "123456") //abordagem funcional
+                .clicarMe()
+                .clicarAbaMoreDataAboutYou()
+                .clicarBotaoAddMoreDataAboutYou();
+                //.typeLogin("julio0001") abordagem estrutural
+                //.typePassword("123456")
+                //.clickSignIn();
     }
 
     @After
